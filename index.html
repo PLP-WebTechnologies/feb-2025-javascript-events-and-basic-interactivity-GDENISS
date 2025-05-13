@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Playground</h1>
+    </header>
+    <main>
+        <!-- Slideshow -->
+        <section class="slideshow">
+            <div class="slide active">
+                <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </section>
+
+        <!-- Interactive Button -->
+        <section>
+            <button id="magicButton" onmouseover="hoverEffect(true)" onmouseout="hoverEffect(false)" ondblclick="secretAction()">Magic Button</button>
+            <p id="buttonText">Click or hover me for some magic!</p>
+        </section>
+
+        <!-- Tabs -->
+        <section class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="openTab(0)">Tab 1</button>
+                <button class="tab-button" onclick="openTab(1)">Tab 2</button>
+                <button class="tab-button" onclick="openTab(2)">Tab 3</button>
+            </div>
+            <div class="tab-content active">
+                <h2>Tab 1</h2>
+                <p>Welcome to the first tab! This is fun content.</p>
+            </div>
+            <div class="tab-content">
+                <h2>Tab 2</h2>
+                <p>Second tab has more exciting stuff!</p>
+            </div>
+            <div class="tab-content">
+                <h2>Tab 3</h2>
+                <p>Third tab is the best yet!</p>
+            </div>
+        </section>
+
+        <!-- Form -->
+        <section class="form-container">
+            <form id="signupForm" onsubmit="validateForm(event)">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
